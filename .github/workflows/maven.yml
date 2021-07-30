@@ -21,5 +21,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: /home/runner/work/pipeline-hello-world/pipeline-hello-world/target/   
     - name: Build with Maven
       run: mvn clean install
